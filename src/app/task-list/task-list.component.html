@@ -1,0 +1,9 @@
+<app-loader *ngIf="loading"></app-loader>
+
+<h3 class="text-center" *ngIf="noTasksMsg"> No Tasks </h3>
+
+<app-alert *ngIf="errorMsg"> {{errorMsg}} </app-alert>
+
+<div class="list-group shadow" *ngIf="tasks.length > 0">
+    <app-single-task *ngFor="let task of tasks" [task]="task"></app-single-task>
+</div>

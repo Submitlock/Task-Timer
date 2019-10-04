@@ -1,0 +1,28 @@
+.remove-btn {
+    position: absolute;
+    right: -3px;
+    top: -5px;
+    color: white;
+    background: red;
+    padding: 2px 7px;
+    border-radius: 50%;
+    font-size: 10px;
+    transition: .2s ease;
+}
+.remove-btn:hover {
+    transform: scale(1.2);
+}
+
+.loader {
+    position: absolute;
+    right: -100px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.error {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 50%;
+}

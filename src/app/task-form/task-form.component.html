@@ -1,0 +1,25 @@
+<div class="card shadow">
+    <div class="card-body">
+        <h5 class="text-center"> {{editMode ? 'Update Task' : 'Create new Task'}} </h5>
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)" >
+            <div class="row align-items-center">
+                <div class="col-8">
+                    <div class="form-group">
+                        <input type="text" class="form-control" ngModel name="name" placeholder="Task Name" required>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary" [disabled]="!f.valid">
+                            {{editMode ? 'Update' : 'Create Task'}}
+                            <app-btn-loader *ngIf="loading"></app-btn-loader>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-12" *ngIf="errorMsg">
+                    <app-alert> {{errorMsg}} </app-alert>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
